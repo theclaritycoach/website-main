@@ -35,3 +35,7 @@ Plain-language record of choices made while building the CCE Talent Network, and
 23. **New skills on existing roles,** plus one new shared skill for every role: "Reviewing and verifying AI output."
 24. **Five certifications added,** all marked as needing verification: IAPP AIGP, ISO/IEC 42001 Lead Implementer, PMI-CPMAI, APMP Foundation, and APMP Practitioner.
 25. **AI Governance & Risk Specialist sits in AI & Automation,** next to AI Transformation Strategist, so AI-related roles filter together.
+26. **Five more roles added:** Software Engineer (Full-Stack), Data Engineer, UX / Product Designer, and Cybersecurity Specialist (AI & Automation), and Solutions Engineer (Pre-Sales) (Cross-practice). "Sales engineer" became Solutions Engineer because CCE sells services, not a software product.
+27. **Pre-sales pay is an open business decision.** Solutions Engineer work happens before a client pays. CCE needs to choose hourly pay, a win bonus, or a mix before staffing this role.
+28. **Three certifications added** (all needing verification): CompTIA Security+, CISSP, and the Nielsen Norman Group UX Certification. The cloud associate placeholders now also link to Software Engineer and Data Engineer, and Claude Certified Architect Foundations links to Solutions Engineer.
+29. **AI & Automation now holds 11 of 26 roles.** That's fine for filtering. If the form's role list feels long, the next step is grouping roles under headings within a practice, not splitting the practice.

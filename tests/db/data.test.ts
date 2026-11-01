@@ -121,13 +121,13 @@ describe.skipIf(!enabled)("search", () => {
 
 describe.skipIf(!enabled)("seed data", () => {
 
-  it("has the 21 roles across 3 practices plus cross-practice", async () => {
+  it("has the 26 roles across 3 practices plus cross-practice", async () => {
     const r = await as(url, admin, (c) =>
       c.query(`select p.slug, count(r.id)::int n from public.practices p join public.roles r on r.practice_id = p.id group by p.slug order by p.slug`),
     );
     expect(r.rows).toEqual([
-      { slug: "ai-automation", n: 7 },
-      { slug: "cross-practice", n: 3 },
+      { slug: "ai-automation", n: 11 },
+      { slug: "cross-practice", n: 4 },
       { slug: "people-workforce", n: 6 },
       { slug: "strategy-transformation", n: 5 },
     ]);

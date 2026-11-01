@@ -2,7 +2,7 @@
 
 Generated from `supabase/seed-data/catalog.yaml` by `npm run seed:build`. Edit the YAML, not this file.
 
-**Totals:** 4 practice groups, 21 roles, 170 unique skills, 32 certifications.
+**Totals:** 4 practice groups, 26 roles, 200 unique skills, 35 certifications.
 
 ## Shared skills (every role)
 
@@ -50,6 +50,17 @@ Generated from `supabase/seed-data/catalog.yaml` by `npm run seed:build`. Edit t
 - Past performance write-ups
 - Government procurement rules (federal, state, local)
 - *Recommended certifications:* APMP Foundation; APMP Practitioner
+
+### Solutions Engineer (Pre-Sales): Scopes technical solutions with prospects, builds quick prototypes, and writes the technical approach for proposals.
+
+- Technical discovery
+- Engagement scoping
+- Solution scoping and estimation
+- Rapid prototyping and demos
+- Technical proposal writing
+- Executive communication
+- Technical objection handling
+- *Recommended certifications:* Claude Certified Architect, Foundations
 
 ## Strategy & Transformation
 
@@ -153,6 +164,20 @@ Generated from `supabase/seed-data/catalog.yaml` by `npm run seed:build`. Edit t
 - Agent evaluation and testing
 - *Recommended certifications:* Claude Certified Developer, Foundations; AWS associate-level certification; Microsoft Azure associate-level certification; Google Cloud associate-level certification
 
+### Software Engineer (Full-Stack): Builds the applications, portals, and integrations around AI solutions.
+
+- Front-end development (React, Next.js)
+- Back-end and API development
+- JavaScript/TypeScript
+- Databases (Postgres, Supabase)
+- Authentication and application security
+- Automated testing
+- CI/CD and DevOps
+- Cloud deployment (AWS, Azure, GCP, Netlify, Vercel)
+- Version control (Git)
+- Web accessibility (WCAG)
+- *Recommended certifications:* AWS associate-level certification; Microsoft Azure associate-level certification; Google Cloud associate-level certification
+
 ### Automation & Implementation Specialist
 
 - Workflow automation (n8n, Zapier, Make)
@@ -175,6 +200,18 @@ Generated from `supabase/seed-data/catalog.yaml` by `npm run seed:build`. Edit t
 - Data governance
 - Data readiness for AI
 
+### Data Engineer: Builds the data pipelines and storage that analytics and AI depend on.
+
+- Data pipelines (ETL/ELT)
+- SQL
+- Python
+- Data warehousing (Snowflake, BigQuery, Databricks)
+- Data integration and APIs
+- Data quality and testing
+- Vector databases and embeddings for AI
+- Data readiness for AI
+- *Recommended certifications:* AWS associate-level certification; Microsoft Azure associate-level certification; Google Cloud associate-level certification
+
 ### AI Operations Specialist: Keeps AI agents and automations healthy after launch.
 
 - Agent monitoring and maintenance
@@ -195,6 +232,28 @@ Generated from `supabase/seed-data/catalog.yaml` by `npm run seed:build`. Edit t
 - AI vendor risk review
 - AI use disclosure and documentation
 - *Recommended certifications:* Artificial Intelligence Governance Professional (AIGP); ISO/IEC 42001 Lead Implementer
+
+### UX / Product Designer: Designs the screens and experiences people use, including AI tools.
+
+- User research
+- Interaction design
+- Prototyping (Figma)
+- Usability testing
+- Accessible design (WCAG)
+- Design for AI experiences (conversational and agent interfaces)
+- Design systems
+- *Recommended certifications:* UX Certification
+
+### Cybersecurity Specialist: Secures systems and AI deployments and supports security compliance.
+
+- Security risk assessment
+- Identity and access management
+- Cloud security
+- AI security (prompt injection, data leakage)
+- Security frameworks and compliance (NIST CSF, SOC 2, CMMC)
+- Incident response planning
+- Vulnerability management
+- *Recommended certifications:* CompTIA Security+; Certified Information Systems Security Professional (CISSP)
 
 ## People & Workforce
 
@@ -268,16 +327,16 @@ Generated from `supabase/seed-data/catalog.yaml` by `npm run seed:build`. Edit t
 | Name | Issuer | Code | Tier | Linked roles |
 |---|---|---|---|---|
 | Claude Certified Associate, Foundations | Anthropic |  | baseline | all (baseline) |
-| Claude Certified Architect, Foundations | Anthropic |  | role_recommended | ai-solutions-architect |
+| Claude Certified Architect, Foundations | Anthropic |  | role_recommended | ai-solutions-architect, solutions-engineer-presales |
 | Claude Certified Architect, Professional | Anthropic |  | specialist | ai-solutions-architect |
 | Claude Certified Developer, Foundations | Anthropic |  | role_recommended | ai-engineer-developer |
 | Microsoft Certified: AI Business Professional | Microsoft | AB-730 | baseline | all (baseline) |
 | Google Cloud Generative AI Leader | Google Cloud |  | baseline | ai-transformation-strategist, client-delivery-lead |
 | AWS Certified AI Practitioner | Amazon Web Services | AIF-C01 | baseline | all (baseline) |
 | Microsoft AI Transformation Leader | Microsoft | AB-731 | role_recommended | ai-transformation-strategist, client-delivery-lead |
-| AWS associate-level certification | Amazon Web Services |  | role_recommended | ai-engineer-developer |
-| Microsoft Azure associate-level certification | Microsoft |  | role_recommended | ai-engineer-developer |
-| Google Cloud associate-level certification | Google Cloud |  | role_recommended | ai-engineer-developer |
+| AWS associate-level certification | Amazon Web Services |  | role_recommended | ai-engineer-developer, software-engineer-full-stack, data-engineer |
+| Microsoft Azure associate-level certification | Microsoft |  | role_recommended | ai-engineer-developer, software-engineer-full-stack, data-engineer |
+| Google Cloud associate-level certification | Google Cloud |  | role_recommended | ai-engineer-developer, software-engineer-full-stack, data-engineer |
 | Prosci Certified Change Practitioner | Prosci |  | role_recommended | change-adoption-strategist |
 | Project Management Professional (PMP) | Project Management Institute | PMP | role_recommended | program-project-manager |
 | Certified Associate in Project Management (CAPM) | Project Management Institute | CAPM | role_recommended | program-project-manager |
@@ -298,4 +357,7 @@ Generated from `supabase/seed-data/catalog.yaml` by `npm run seed:build`. Edit t
 | ISO/IEC 42001 Lead Implementer | Various accredited bodies (e.g., PECB) |  | specialist | ai-governance-risk-specialist |
 | PMI Certified Professional in Managing AI (PMI-CPMAI) | Project Management Institute | PMI-CPMAI | role_recommended | program-project-manager, ai-transformation-strategist |
 | APMP Foundation | Association of Proposal Management Professionals |  | role_recommended | proposal-capture-manager |
+| CompTIA Security+ | CompTIA | Security+ | role_recommended | cybersecurity-specialist |
+| Certified Information Systems Security Professional (CISSP) | ISC2 | CISSP | specialist | cybersecurity-specialist |
+| UX Certification | Nielsen Norman Group |  | role_recommended | ux-product-designer |
 | APMP Practitioner | Association of Proposal Management Professionals |  | specialist | proposal-capture-manager |

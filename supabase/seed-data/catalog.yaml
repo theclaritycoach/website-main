@@ -73,6 +73,17 @@ practices:
           - Pricing and cost volume coordination
           - Past performance write-ups
           - Government procurement rules (federal, state, local)
+      - slug: solutions-engineer-presales
+        name: Solutions Engineer (Pre-Sales)
+        description: Scopes technical solutions with prospects, builds quick prototypes, and writes the technical approach for proposals.
+        skills:
+          - Technical discovery
+          - Engagement scoping
+          - Solution scoping and estimation
+          - Rapid prototyping and demos
+          - Technical proposal writing
+          - Executive communication
+          - Technical objection handling
 
   - slug: strategy-transformation
     name: Strategy & Transformation
@@ -174,6 +185,20 @@ practices:
           - Version control (Git)
           - Client-embedded delivery (forward-deployed)
           - Agent evaluation and testing
+      - slug: software-engineer-full-stack
+        name: Software Engineer (Full-Stack)
+        description: Builds the applications, portals, and integrations around AI solutions.
+        skills:
+          - Front-end development (React, Next.js)
+          - Back-end and API development
+          - JavaScript/TypeScript
+          - Databases (Postgres, Supabase)
+          - Authentication and application security
+          - Automated testing
+          - CI/CD and DevOps
+          - Cloud deployment (AWS, Azure, GCP, Netlify, Vercel)
+          - Version control (Git)
+          - Web accessibility (WCAG)
       - slug: automation-implementation-specialist
         name: Automation & Implementation Specialist
         skills:
@@ -195,6 +220,18 @@ practices:
           - Survey design and analysis
           - Data visualization
           - Data governance
+          - Data readiness for AI
+      - slug: data-engineer
+        name: Data Engineer
+        description: Builds the data pipelines and storage that analytics and AI depend on.
+        skills:
+          - Data pipelines (ETL/ELT)
+          - SQL
+          - Python
+          - Data warehousing (Snowflake, BigQuery, Databricks)
+          - Data integration and APIs
+          - Data quality and testing
+          - Vector databases and embeddings for AI
           - Data readiness for AI
       - slug: ai-operations-specialist
         name: AI Operations Specialist
@@ -218,6 +255,28 @@ practices:
           - AI regulatory requirements (TRAIGA, EU AI Act, sector rules)
           - AI vendor risk review
           - AI use disclosure and documentation
+      - slug: ux-product-designer
+        name: UX / Product Designer
+        description: Designs the screens and experiences people use, including AI tools.
+        skills:
+          - User research
+          - Interaction design
+          - Prototyping (Figma)
+          - Usability testing
+          - Accessible design (WCAG)
+          - Design for AI experiences (conversational and agent interfaces)
+          - Design systems
+      - slug: cybersecurity-specialist
+        name: Cybersecurity Specialist
+        description: Secures systems and AI deployments and supports security compliance.
+        skills:
+          - Security risk assessment
+          - Identity and access management
+          - Cloud security
+          - AI security (prompt injection, data leakage)
+          - Security frameworks and compliance (NIST CSF, SOC 2, CMMC)
+          - Incident response planning
+          - Vulnerability management
 
   - slug: people-workforce
     name: People & Workforce
@@ -328,7 +387,7 @@ certifications:
     issuer: Anthropic
     tier: role_recommended
     display_priority: 2
-    roles: [ai-solutions-architect]
+    roles: [ai-solutions-architect, solutions-engineer-presales]
   - slug: claude-certified-architect-professional
     name: Claude Certified Architect, Professional
     issuer: Anthropic
@@ -346,19 +405,19 @@ certifications:
     name: AWS associate-level certification
     issuer: Amazon Web Services
     tier: role_recommended
-    roles: [ai-engineer-developer]
+    roles: [ai-engineer-developer, software-engineer-full-stack, data-engineer]
     notes: Placeholder for the specific AWS associate credential(s) you want to recommend.
   - slug: azure-associate-level
     name: Microsoft Azure associate-level certification
     issuer: Microsoft
     tier: role_recommended
-    roles: [ai-engineer-developer]
+    roles: [ai-engineer-developer, software-engineer-full-stack, data-engineer]
     notes: Placeholder for the specific Azure associate credential(s) you want to recommend.
   - slug: google-cloud-associate-level
     name: Google Cloud associate-level certification
     issuer: Google Cloud
     tier: role_recommended
-    roles: [ai-engineer-developer]
+    roles: [ai-engineer-developer, software-engineer-full-stack, data-engineer]
     notes: Placeholder for the specific Google Cloud associate credential(s) you want to recommend.
   - slug: microsoft-ai-transformation-leader
     name: Microsoft AI Transformation Leader
@@ -481,6 +540,23 @@ certifications:
     issuer: Association of Proposal Management Professionals
     tier: role_recommended
     roles: [proposal-capture-manager]
+  - slug: comptia-security-plus
+    name: CompTIA Security+
+    issuer: CompTIA
+    code: Security+
+    tier: role_recommended
+    roles: [cybersecurity-specialist]
+  - slug: isc2-cissp
+    name: Certified Information Systems Security Professional (CISSP)
+    issuer: ISC2
+    code: CISSP
+    tier: specialist
+    roles: [cybersecurity-specialist]
+  - slug: nng-ux-certification
+    name: UX Certification
+    issuer: Nielsen Norman Group
+    tier: role_recommended
+    roles: [ux-product-designer]
   - slug: apmp-practitioner
     name: APMP Practitioner
     issuer: Association of Proposal Management Professionals
