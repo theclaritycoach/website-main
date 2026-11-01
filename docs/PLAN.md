@@ -1,6 +1,19 @@
 # CCE Talent Network: Build Plan (draft for approval)
 
-Status: **waiting for Precious's approval.** No application code has been written yet.
+Status: **approved 2026-11-01.** Slices 0 and 1 are done.
+
+### Answers that shaped this plan (2026-11-01)
+
+- Separate repo: `cce-talent-network`
+- Brand colors: CCE Visual Brand Kit v1.0. Sunbeam `#FCCA03` is the primary accent (the old gold is retired)
+- Supabase: free tier, with a daily keep-alive job
+- No Cloudflare account, so spam protection uses a honeypot, a minimum fill time, and rate limits. Turnstile can be added later (free) if spam shows up
+- DNS for partnerwithcce.com is at Squarespace
+- Sender: talent@partnerwithcce.com
+- First admin: precious@theclaritycoach.co
+- Firm team invites go out only when an admin clicks "Send invites"
+- Everyone, including current consultants, goes through the new application. No CSV import or manual add
+- Working name stays "CCE Talent Network"
 
 ---
 
@@ -14,26 +27,25 @@ Why intake goes first:
 2. **Resume extraction is the riskiest piece.** It involves the AI call, file parsing, timeouts, cost, and the fallback path. Building it first means we find problems while they're cheap to fix.
 3. **The backend is more useful with real data in it.** Filters and dashboards are easier to judge when real records sit behind them. The 10 labeled fake applicants cover testing until real ones arrive.
 
-The trade-off: you can't import your current people until Phase 2. If you need them in the system first, I can move "Add person" and CSV import up to be the first Phase 2 slice. They only need the schema, so the move is cheap.
+Your current people apply through the same form, so there's no import step to wait for.
 
 ### Slices (each ends with "here's what to click to test it")
 
 | # | Slice | You can test |
 |---|---|---|
-| 0 | Project setup: Next.js, Tailwind, Supabase migrations, seed file, `.env.example`, README, DECISIONS.md | App runs locally; seeded tables visible in Supabase |
-| 1 | Schema + RLS + seed (practices, roles, skills, certs, options, statuses, 10 fake people) | Show you the full seeded skills list for edits |
+| 0 ✅ | Project setup: Next.js, Tailwind, Supabase migrations, seed file, `.env.example`, README, DECISIONS.md | App runs locally; seeded tables visible in Supabase |
+| 1 ✅ | Schema + RLS + seed (practices, roles, skills, certs, options, statuses, 10 fake people) | Review `docs/SEED-REVIEW.md` |
 | 2 | Public form, manual path only (steps 2 to 11, local save, review, submit, confirmation) | Fill out the whole form on your phone without a resume |
 | 3 | Resume upload + text extraction + Claude extraction + prefill + fallback | Upload a PDF, a DOCX, and an image-only PDF |
-| 4 | Confirmation email (Resend) + Slack ping + Slack failure alerts + rate limiting + Turnstile | Submit and watch your inbox and Slack |
+| 4 | Confirmation email (Resend) + Slack ping + Slack failure alerts + rate limiting + honeypot spam check | Submit and watch your inbox and Slack |
 | 5 | Admin login (allowlist) + minimal profile page + resume signed URL + RLS tests | Try opening a resume while logged out (it should fail) |
-| 6 | Firm/Team path + team member invite links | Apply as a firm and open an invite link |
+| 6 | Firm/Team path + team member invite links (sent when you click "Send invites") | Apply as a firm, send invites, open an invite link |
 | 7 | "Update my profile" magic link | Request a link and edit availability |
-| 8 | Deploy to Netlify + `talent.partnerwithcce.com` DNS walkthrough | **Phase 1 done** |
+| 8 | Deploy to Netlify + `talent.partnerwithcce.com` DNS walkthrough (Squarespace) + daily keep-alive job | **Phase 1 done** |
 | 9 | Talent pool table, combined filters, full-text search, saved filters, CSV export | Run the "AI architects, 5+ years, available in 30 days" search |
 | 10 | Profile view: assigned roles, status changes + history, notes, tags, scorecards, onboarding checklist, changed-field markers | Move a fake applicant through statuses |
-| 11 | Add person + CSV import (sends the update-profile link) | Import a sample CSV |
-| 12 | Projects + shortlists + export | Shortlist people onto a fake RFP |
-| 13 | Overview dashboard + suggested skills queue + retention/deletion jobs | **Phase 2 done** |
+| 11 | Projects + shortlists + export | Shortlist people onto a fake RFP |
+| 12 | Overview dashboard + suggested skills queue + retention/deletion jobs | **Phase 2 done** |
 
 ---
 
@@ -44,7 +56,7 @@ The trade-off: you can't import your current people until Phase 2. If you need t
 - **Claude API** for resume extraction only, using Claude's smallest, fastest model tier (Haiku)
 - **Resend** for the one confirmation email (free tier)
 - **Slack incoming webhook** for alerts (free)
-- **Cloudflare Turnstile** for spam protection (free)
+- **Spam protection:** honeypot field, minimum time to fill, and rate limits (Cloudflare Turnstile can be added later for free)
 
 **Adjustment 1: where extraction runs.** Netlify's standard functions have a short time limit. Reading a resume with AI can occasionally take longer than that. I plan to run the extraction step as a **Supabase Edge Function**, which allows a longer run time on the free tier. The browser never talks to Claude directly either way. I'll confirm the exact limits on both platforms during slice 3 and log the result in DECISIONS.md.
 
@@ -77,7 +89,7 @@ Supabase pauses free projects after **7 days without activity**. A paused projec
 | **A. Keep-alive ping** | $0 | A scheduled job (GitHub Actions or a Netlify scheduled function) runs a tiny database query daily. I'd pair it with a daily health check that posts to Slack if the form's backend stops responding. Risk: it's a workaround, so if Supabase changes how it detects activity, it could stop working. Free tier also has small limits (500 MB database, about 1 GB file storage) and fewer backup options. |
 | **B. Supabase Pro** | $25 | No pausing, 8 GB database, 100 GB file storage, backups. |
 
-**My recommendation:** use Option A while we build and soft-launch. Move to Pro before you promote the form widely or once you're holding real people's data you can't afford to lose. Your call.
+**Decision:** Option A (free tier with keep-alive). Revisit Pro before promoting the form widely or once the database holds data you can't afford to lose.
 
 ### Resend free tier
 
@@ -85,7 +97,7 @@ Supabase pauses free projects after **7 days without activity**. A paused projec
 
 ### Everything else
 
-Netlify, Slack webhook, Turnstile: $0. **Nothing else that costs money gets added without asking you first.**
+Netlify, Slack webhook: $0. **Nothing else that costs money gets added without asking you first.**
 
 ---
 
@@ -179,7 +191,6 @@ Conventions: every table has `id uuid`, `created_at`, `updated_at`. Fake seed re
 - `/admin` Overview dashboard
 - `/admin/talent` Talent pool (filters, search, saved filters, export, add to shortlist)
 - `/admin/people/[id]` Profile
-- `/admin/people/new` Add person · `/admin/import` CSV import
 - `/admin/firms/[id]` Firm with its people
 - `/admin/projects` and `/admin/projects/[id]`
 - `/admin/suggested-skills` Review queue

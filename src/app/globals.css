@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+/*
+ * CCE Visual Brand Kit v1.0 tokens.
+ * Source: CCE document standards (brand-tokens.md). Values are exact.
+ *   Sunbeam leads, but never as text on white: on light backgrounds use it
+ *   only as a rule, bar, dot, highlight, or a panel carrying Ink text.
+ *   Violet is for links, buttons, and interactive elements.
+ *   Ember is for warnings and notes only, never body copy.
+ * Logo: the CCE mark is live text "CCE" with a Sunbeam period, on Stage/Ink.
+ *   Swap in the final logo file here when it's confirmed (see components/brand-mark.tsx).
+ */
+@theme {
+  --color-stage: #0A0A0B;
+  --color-ink: #0F0F0F;
+  --color-body: #4A4A50;
+  --color-mist: #F7F7F9;
+  --color-paper: #FFFFFF;
+  --color-hairline: #EDEDF1;
+  --color-border: #E4E4E8;
+  --color-metadata: #8B8B90;
+  --color-ember: #E8542F;
+  --color-violet: #5B4BFF;
+  --color-sunbeam: #FCCA03;
+  --color-sunbeam-tint: rgba(252, 202, 3, 0.18);
+  --color-ember-tint: rgba(232, 84, 47, 0.10);
+  --color-button-hover: #2B2B30;
+
+  --font-sans: var(--font-manrope), "Helvetica Neue", Arial, sans-serif;
+  --font-mono: var(--font-space-mono), "SFMono-Regular", Menlo, monospace;
+
+  --radius-chip: 12px;
+  --radius-card: 20px;
+  --radius-btn: 999px;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-body);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Type scale: tracking tightens as size grows */
+.cce-display { font-size: clamp(44px, 8vw, 88px); line-height: 0.96; letter-spacing: -0.045em; font-weight: 800; color: var(--color-ink); }
+.cce-h1 { font-size: clamp(32px, 5vw, 46px); line-height: 1.05; letter-spacing: -0.035em; font-weight: 800; color: var(--color-ink); }
+.cce-h2 { font-size: clamp(24px, 3.5vw, 30px); line-height: 1.1; letter-spacing: -0.03em; font-weight: 800; color: var(--color-ink); }
+.cce-lead { font-size: 19px; line-height: 1.55; color: var(--color-body); }
+.cce-label { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; }
+
+/* Focus: 2px ink outline at 2px offset, everywhere (WCAG 2.1 AA) */
+:focus-visible {
+  outline: 2px solid var(--color-ink);
+  outline-offset: 2px;
+}

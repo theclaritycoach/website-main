@@ -1,0 +1,337 @@
+# SAMPLE DATA ONLY. Fictional people at fictional companies, for testing filters.
+# Every record is flagged is_sample = true and every name ends in "(Sample)".
+# Remove them all before launch with:  npm run sample:remove
+#
+# start_in_days is relative to the day the sample data is loaded, so
+# "available within 30 days" filters keep working over time.
+
+firms:
+  - key: bayou-learning
+    name: Bayou Learning Collective (Sample)
+    website: https://example.com/bayou-learning
+    team_size: 6_10
+    years_in_business: 7
+    business_certs: [wbe, hub]
+    services: [training-facilitator, learning-experience-designer, leadership-development-consultant]
+
+people:
+  - email: maya.okafor@example.com
+    full_name: Maya Okafor (Sample)
+    city: Houston
+    state: TX
+    time_zone: CT
+    status: qualified_awaiting_assignment
+    total_years: 11
+    consulting_years: 6
+    primary_practice: ai-automation
+    secondary_practice: strategy-transformation
+    self_qualified: [ai-solutions-architect, ai-engineer-developer]
+    aspiration: [ai-transformation-strategist]
+    assigned: [ai-solutions-architect]
+    skills:
+      Solution architecture: 4
+      LLM application design: 4
+      Claude platform (API, Claude Code, Agent SDK, MCP): 3
+      Retrieval and knowledge systems (RAG): 3
+      Agent and workflow design: 3
+      Integration architecture: 4
+      Python: 4
+      Client communication: 3
+    tools: [claude, python, aws, sql]
+    industries: [healthcare, technology]
+    client_types: [mid_market, fortune_500]
+    ai_usage_frequency: core
+    hours_per_week: 20_30
+    start_in_days: 14
+    engagement_types: [project_based, rfp_bench]
+    work_settings: [remote, onsite_houston]
+    certifications:
+      - { slug: claude-certified-architect-foundations, year_earned: 2026 }
+      - { slug: aws-certified-ai-practitioner, year_earned: 2025 }
+    work_history:
+      - { company: Gulf Coast Health Network, title: Principal Solutions Architect, start: 2021-03, end: current, industry: healthcare, description: Leads architecture for clinical document search and AI-assisted intake. }
+      - { company: Lone Star Data Works, title: Senior Software Engineer, start: 2016-06, end: 2021-02, industry: technology, description: Built integration services and internal data platforms. }
+      - { company: Meridian Insurance Group, title: Software Engineer, start: 2015-01, end: 2016-05, industry: insurance }
+
+  - email: daniel.reyes@example.com
+    full_name: Daniel Reyes (Sample)
+    city: Austin
+    state: TX
+    time_zone: CT
+    status: under_review
+    total_years: 9
+    consulting_years: 3
+    primary_practice: ai-automation
+    self_qualified: [ai-solutions-architect]
+    skills:
+      Solution architecture: 2
+      LLM application design: 2
+      Agent and workflow design: 2
+      Python: 3
+      SQL: 3
+    tools: [chatgpt, python, azure]
+    industries: [financial_services]
+    client_types: [fortune_500]
+    ai_usage_frequency: weekly
+    hours_per_week: 10_20
+    start_in_days: 7
+    engagement_types: [project_based]
+    work_settings: [remote]
+    work_history:
+      - { company: Capitol Ridge Bank, title: Data Engineer, start: 2017-08, end: current, industry: financial_services }
+      - { company: Northbeam Analytics, title: Analyst, start: 2016-01, end: 2017-07, industry: technology }
+
+  - email: priya.shah@example.com
+    full_name: Priya Shah (Sample)
+    city: Arlington
+    state: VA
+    time_zone: ET
+    status: approved_in_development
+    total_years: 4
+    consulting_years: 2
+    primary_practice: ai-automation
+    self_qualified: [ai-engineer-developer, ai-solutions-architect]
+    aspiration: [ai-solutions-architect]
+    assigned: [ai-engineer-developer]
+    skills:
+      LLM application design: 3
+      Agent and workflow design: 3
+      MCP server development: 3
+      Python: 3
+      JavaScript/TypeScript: 4
+      Databases (Postgres, Supabase): 3
+    tools: [claude, python, google_cloud]
+    industries: [government, technology]
+    client_types: [public_sector, startups]
+    ai_usage_frequency: core
+    hours_per_week: 30_40
+    start_in_days: 0
+    engagement_types: [project_based, embedded]
+    work_settings: [remote, onsite_dmv]
+    gov_subcontractor: true
+    certifications:
+      - { slug: claude-certified-developer-foundations, state: in_progress, target_in_days: 45 }
+    work_history:
+      - { company: Potomac Civic Tech, title: AI Engineer, start: 2023-01, end: current, industry: government, description: Builds agents for benefits case review. }
+      - { company: Brightline Apps, title: Junior Developer, start: 2021-06, end: 2022-12, industry: technology }
+
+  - email: marcus.bennett@example.com
+    full_name: Marcus Bennett (Sample)
+    city: Dallas
+    state: TX
+    time_zone: CT
+    status: active_on_project
+    total_years: 15
+    consulting_years: 10
+    primary_practice: ai-automation
+    secondary_practice: cross-practice
+    self_qualified: [ai-solutions-architect, client-delivery-lead]
+    assigned: [ai-solutions-architect, client-delivery-lead]
+    skills:
+      Solution architecture: 4
+      Integration architecture: 4
+      Security and access design: 3
+      Evaluation and testing of AI systems: 3
+      Engagement scoping: 4
+      Executive communication: 3
+    tools: [claude, microsoft_copilot, azure, salesforce]
+    industries: [insurance, professional_services]
+    client_types: [fortune_500, mid_market]
+    ai_usage_frequency: daily
+    hours_per_week: 20_30
+    start_in_days: 75
+    engagement_types: [project_based, part_time_retainer]
+    work_settings: [remote, travel]
+    travel_frequency: sometimes
+    certifications:
+      - { slug: microsoft-ai-business-professional, year_earned: 2026 }
+      - { slug: pmi-pmp, year_earned: 2018 }
+    work_history:
+      - { company: Trinity Systems Consulting, title: Managing Architect, start: 2018-02, end: current, industry: professional_services }
+      - { company: Meridian Insurance Group, title: Enterprise Architect, start: 2011-05, end: 2018-01, industry: insurance }
+
+  - email: alicia.thompson@example.com
+    full_name: Alicia Thompson (Sample)
+    city: Houston
+    state: TX
+    time_zone: CT
+    status: alignment_call_scheduled
+    total_years: 13
+    consulting_years: 8
+    primary_practice: strategy-transformation
+    secondary_practice: people-workforce
+    self_qualified: [change-adoption-strategist, transformation-consultant]
+    aspiration: [ai-transformation-strategist]
+    skills:
+      Change management methodology (Prosci ADKAR, Kotter): 4
+      Stakeholder analysis: 4
+      Change impact assessment: 3
+      Communication planning: 3
+      Organizational assessment: 3
+      Stakeholder management: 4
+    tools: [microsoft_365, chatgpt, notion]
+    industries: [healthcare, nonprofit, education]
+    client_types: [nonprofits, mid_market]
+    ai_usage_frequency: weekly
+    hours_per_week: 10_20
+    start_in_days: 21
+    engagement_types: [project_based, rfp_bench]
+    work_settings: [remote, onsite_houston]
+    certifications:
+      - { slug: prosci-certified-change-practitioner, year_earned: 2020 }
+    work_history:
+      - { company: Harbor Point Hospital System, title: Director of Organizational Change, start: 2019-04, end: current, industry: healthcare }
+      - { company: Westfield Advisory Group, title: Senior Consultant, start: 2013-01, end: 2019-03, industry: professional_services }
+
+  - email: jordan.lee@example.com
+    full_name: Jordan Lee (Sample)
+    city: Silver Spring
+    state: MD
+    time_zone: ET
+    status: applied
+    total_years: 7
+    consulting_years: 4
+    primary_practice: cross-practice
+    self_qualified: [program-project-manager]
+    skills:
+      Project planning and scheduling: 4
+      Agile/Scrum: 3
+      Budget tracking: 3
+      Government contract deliverables and compliance: 4
+      Status reporting: 3
+    tools: [microsoft_365, airtable]
+    industries: [government]
+    client_types: [public_sector]
+    ai_usage_frequency: monthly
+    hours_per_week: 40_plus
+    start_in_days: 30
+    engagement_types: [embedded, rfp_bench]
+    work_settings: [onsite_dmv, remote]
+    gov_subcontractor: true
+    certifications:
+      - { slug: pmi-pmp, year_earned: 2022 }
+      - { slug: scrum-alliance-csm, year_earned: 2021 }
+    work_history:
+      - { company: Anacostia Federal Partners, title: Program Manager, start: 2020-09, end: current, industry: government }
+      - { company: Chesapeake Logistics, title: Project Coordinator, start: 2018-01, end: 2020-08, industry: other }
+
+  - email: renee.walker@example.com
+    full_name: Renee Walker (Sample)
+    city: Atlanta
+    state: GA
+    time_zone: ET
+    status: not_selected
+    total_years: 5
+    consulting_years: 1
+    primary_practice: strategy-transformation
+    self_qualified: [brand-communications-strategist]
+    skills:
+      Brand strategy: 3
+      Messaging frameworks: 2
+      Content strategy: 3
+      Storytelling: 3
+    tools: [canva, chatgpt, hubspot]
+    industries: [hospitality, faith_based]
+    client_types: [small_business]
+    ai_usage_frequency: weekly
+    hours_per_week: under_10
+    start_in_days: 60
+    engagement_types: [project_based]
+    work_settings: [remote]
+    work_history:
+      - { company: Peachtree Hospitality Co., title: Marketing Manager, start: 2021-02, end: current, industry: hospitality }
+
+  - email: tomas.alvarez@example.com
+    full_name: Tomas Alvarez (Sample)
+    city: San Antonio
+    state: TX
+    time_zone: CT
+    status: post_call_review
+    total_years: 8
+    consulting_years: 5
+    primary_practice: ai-automation
+    self_qualified: [automation-implementation-specialist, data-analytics-specialist]
+    skills:
+      Workflow automation (n8n, Zapier, Make): 4
+      CRM automation: 3
+      Airtable and Notion builds: 4
+      SQL: 3
+      Dashboards and reporting (Power BI, Looker, Tableau): 3
+    tools: [n8n, zapier, make, airtable, notion, hubspot, power_bi]
+    industries: [trades_construction, professional_services]
+    client_types: [small_business, startups]
+    ai_usage_frequency: core
+    hours_per_week: 20_30
+    start_in_days: 10
+    engagement_types: [project_based, part_time_retainer]
+    work_settings: [remote]
+    certifications:
+      - { slug: google-cloud-generative-ai-leader, year_earned: 2025 }
+    work_history:
+      - { company: Alamo Ops Studio, title: Founder, start: 2021-01, end: current, industry: professional_services }
+      - { company: Riverwalk Builders, title: Operations Analyst, start: 2017-03, end: 2020-12, industry: trades_construction }
+
+  - email: keisha.robinson@example.com
+    full_name: Keisha Robinson (Sample)
+    city: Houston
+    state: TX
+    time_zone: CT
+    status: approved_in_development
+    applicant_type: firm_contact
+    firm: bayou-learning
+    total_years: 16
+    consulting_years: 9
+    primary_practice: people-workforce
+    self_qualified: [training-facilitator, leadership-development-consultant]
+    assigned: [training-facilitator]
+    skills:
+      Live workshop facilitation: 4
+      Virtual facilitation (Zoom, Teams): 4
+      Keynote and large-group speaking: 3
+      Leadership program design: 3
+      360 assessments: 3
+    tools: [microsoft_365, canva, lms_platforms]
+    industries: [education, nonprofit, faith_based]
+    client_types: [nonprofits, public_sector]
+    ai_usage_frequency: weekly
+    hours_per_week: 20_30
+    start_in_days: 5
+    engagement_types: [facilitation_training, project_based]
+    work_settings: [onsite_houston, travel]
+    travel_frequency: often
+    certifications:
+      - { slug: atd-cptd, year_earned: 2019 }
+    work_history:
+      - { company: Bayou Learning Collective, title: Founder and Lead Facilitator, start: 2019-01, end: current, industry: education }
+      - { company: Houston Community Partners, title: Training Manager, start: 2010-06, end: 2018-12, industry: nonprofit }
+
+  - email: samuel.green@example.com
+    full_name: Samuel Green (Sample)
+    city: Baton Rouge
+    state: LA
+    time_zone: CT
+    status: applied
+    applicant_type: firm_member
+    firm: bayou-learning
+    total_years: 6
+    consulting_years: 3
+    primary_practice: people-workforce
+    self_qualified: [learning-experience-designer]
+    skills:
+      Instructional design (ADDIE, SAM): 3
+      eLearning authoring (Articulate, Rise, Canva): 4
+      LMS administration: 3
+      Microlearning: 3
+    tools: [canva, lms_platforms, chatgpt]
+    industries: [education]
+    client_types: [nonprofits, mid_market]
+    ai_usage_frequency: daily
+    hours_per_week: 10_20
+    start_in_days: 14
+    engagement_types: [project_based]
+    work_settings: [remote]
+    certifications:
+      - { slug: atd-instructional-design-certificate, year_earned: 2023 }
+    work_history:
+      - { company: Bayou Learning Collective, title: Learning Designer, start: 2022-04, end: current, industry: education }
+      - { company: Pelican State University, title: Instructional Technologist, start: 2019-08, end: 2022-03, industry: education }

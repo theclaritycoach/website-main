@@ -1,0 +1,594 @@
+# CCE Talent Network catalog
+# ---------------------------------------------------------------------------
+# This is the one file to edit when you change practices, roles, skills,
+# certifications, or any dropdown list on the form.
+#
+# After editing:  npm run seed:build   (regenerates supabase/seed.sql)
+#                 npm run seed:apply   (pushes the changes to the database)
+#
+# Rules of thumb:
+#   * `slug` is the permanent ID. Change the `name` freely; don't change the slug
+#     once real applicants have used it.
+#   * Removing an item from this file hides it (active = false). It doesn't
+#     delete history for people who already selected it.
+#   * Skills listed under a role are linked to that role. The same skill name
+#     under two roles becomes one skill linked to both.
+# ---------------------------------------------------------------------------
+
+network:
+  name: CCE Talent Network
+  tagline: Develop People. Build Better Systems.
+  public_base_url: https://talent.partnerwithcce.com
+
+admins:
+  - precious@theclaritycoach.co
+
+# Skills every role shares
+shared_skills:
+  - Client communication
+  - Stakeholder management
+  - Written deliverables (reports, SOWs, decks)
+  - Facilitation of working sessions
+  - AI tool fluency (prompting, using AI in daily work)
+  - Responsible AI use and data privacy basics
+
+practices:
+  - slug: cross-practice
+    name: Cross-practice
+    description: Roles that can staff any engagement.
+    is_cross_practice: true
+    roles:
+      - slug: client-delivery-lead
+        name: Client Delivery Lead
+        description: Owns the client relationship and delivery on an engagement.
+        skills:
+          - Engagement scoping
+          - Client relationship management
+          - Delivery planning
+          - Executive communication
+          - Risk and issue management
+          - Scope and change control
+          - Status reporting
+          - Team coordination
+      - slug: program-project-manager
+        name: Program / Project Manager
+        skills:
+          - Project planning and scheduling
+          - Gantt and timeline management
+          - Resource planning
+          - Budget tracking
+          - Agile/Scrum
+          - Risk management
+          - Project tools (Asana, ClickUp, Monday, MS Project)
+          - Government contract deliverables and compliance
+
+  - slug: strategy-transformation
+    name: Strategy & Transformation
+    roles:
+      - slug: transformation-consultant
+        name: Transformation Consultant
+        skills:
+          - Organizational assessment
+          - Strategic planning
+          - Operating model design
+          - Current/future state analysis
+          - Org design
+          - Executive advising
+          - KPI and metrics design
+      - slug: change-adoption-strategist
+        name: Change & Adoption Strategist
+        skills:
+          - Change management methodology (Prosci ADKAR, Kotter)
+          - Stakeholder analysis
+          - Change impact assessment
+          - Communication planning
+          - Resistance management
+          - Adoption measurement
+          - Training needs analysis
+      - slug: operations-business-systems-strategist
+        name: Operations & Business Systems Strategist
+        skills:
+          - Process mapping
+          - SOP development
+          - Systems selection
+          - CRM implementation
+          - Workflow design
+          - Operational reporting
+          - Capacity planning
+          - Tech stack audits
+      - slug: process-improvement-specialist
+        name: Process Improvement Specialist
+        skills:
+          - Lean
+          - Six Sigma
+          - Root cause analysis
+          - Value stream mapping
+          - Process documentation
+          - Continuous improvement
+          - Time and cost analysis
+      - slug: brand-communications-strategist
+        name: Brand & Communications Strategist
+        skills:
+          - Brand strategy
+          - Messaging frameworks
+          - Internal communications
+          - Content strategy
+          - Visual identity direction
+          - Storytelling
+          - Impact reporting
+
+  - slug: ai-automation
+    name: AI & Automation
+    roles:
+      - slug: ai-transformation-strategist
+        name: AI Transformation Strategist
+        skills:
+          - AI readiness assessment
+          - AI use case identification and prioritization
+          - AI governance and policy
+          - AI adoption roadmaps
+          - ROI analysis for AI
+          - Vendor and tool evaluation
+          - AI training design for teams
+      - slug: ai-solutions-architect
+        name: AI Solutions Architect
+        skills:
+          - Solution architecture
+          - LLM application design
+          - Claude platform (API, Claude Code, Agent SDK, MCP)
+          - Retrieval and knowledge systems (RAG)
+          - Agent and workflow design
+          - Integration architecture
+          - Security and access design
+          - Evaluation and testing of AI systems
+      - slug: ai-engineer-developer
+        name: AI Engineer / Developer
+        skills:
+          - Python
+          - JavaScript/TypeScript
+          - API integration
+          - LLM APIs (Claude, OpenAI)
+          - Agent development
+          - MCP server development
+          - Databases (Postgres, Supabase)
+          - Cloud deployment (AWS, Azure, GCP, Netlify, Vercel)
+          - Version control (Git)
+      - slug: automation-implementation-specialist
+        name: Automation & Implementation Specialist
+        skills:
+          - Workflow automation (n8n, Zapier, Make)
+          - No-code/low-code platforms
+          - Airtable and Notion builds
+          - CRM automation
+          - Integration setup
+          - Testing and QA
+          - User documentation
+      - slug: data-analytics-specialist
+        name: Data & Analytics Specialist
+        skills:
+          - Data analysis
+          - Dashboards and reporting (Power BI, Looker, Tableau)
+          - SQL
+          - Data cleaning and modeling
+          - Survey design and analysis
+          - Data visualization
+          - Data governance
+
+  - slug: people-workforce
+    name: People & Workforce
+    roles:
+      - slug: leadership-development-consultant
+        name: Leadership Development Consultant
+        skills:
+          - Leadership program design
+          - Competency frameworks
+          - 360 assessments
+          - Succession planning
+          - Executive development
+          - Leadership assessments (DISC, StrengthsFinder, etc.)
+      - slug: training-facilitator
+        name: Training Facilitator
+        description: Delivers live workshops and trainings, in person or virtual.
+        skills:
+          - Live workshop facilitation
+          - Virtual facilitation (Zoom, Teams)
+          - Group dynamics
+          - Adult learning delivery
+          - Keynote and large-group speaking
+          - Train-the-trainer
+          - Session evaluation
+      - slug: learning-experience-designer
+        name: Learning Experience Designer
+        description: Designs curriculum, courses, and learning materials.
+        skills:
+          - Instructional design (ADDIE, SAM)
+          - Curriculum development
+          - eLearning authoring (Articulate, Rise, Canva)
+          - LMS administration
+          - Learning assessment design
+          - Microlearning
+          - Adult learning theory
+      - slug: executive-leadership-coach
+        name: Executive / Leadership Coach
+        skills:
+          - One-on-one executive coaching
+          - Team coaching
+          - Coaching assessments
+          - Goal setting and accountability
+          - Career coaching
+          - Difficult conversation coaching
+      - slug: workforce-hr-strategist
+        name: Workforce & HR Strategist
+        skills:
+          - Workforce planning
+          - Talent acquisition strategy
+          - Performance management systems
+          - HR policy development
+          - Compensation and job architecture
+          - Employee engagement
+          - Workforce development programs
+
+# ---------------------------------------------------------------------------
+# Certifications. EVERY entry starts as needs_verification: true.
+# Names, codes, URLs, and prices change. Confirm each one, then set
+# needs_verification: false and last_verified: YYYY-MM-DD.
+# display_priority: lower numbers show first (Anthropic first, as a Claude Partner).
+# approx_cost is left blank on purpose until verified.
+# None of these are required, and CCE does not pay for them.
+# ---------------------------------------------------------------------------
+certifications:
+  # Baseline AI fluency (each person picks at least one)
+  - slug: claude-certified-associate-foundations
+    name: Claude Certified Associate, Foundations
+    issuer: Anthropic
+    tier: baseline
+    display_priority: 1
+  - slug: microsoft-ai-business-professional
+    name: "Microsoft Certified: AI Business Professional"
+    issuer: Microsoft
+    code: AB-730
+    tier: baseline
+    display_priority: 10
+    notes: For Microsoft 365 Copilot.
+  - slug: google-cloud-generative-ai-leader
+    name: Google Cloud Generative AI Leader
+    issuer: Google Cloud
+    tier: baseline
+    display_priority: 11
+    roles: [ai-transformation-strategist, client-delivery-lead]
+  - slug: aws-certified-ai-practitioner
+    name: AWS Certified AI Practitioner
+    issuer: Amazon Web Services
+    code: AIF-C01
+    tier: baseline
+    display_priority: 12
+
+  # Role-recommended
+  - slug: claude-certified-architect-foundations
+    name: Claude Certified Architect, Foundations
+    issuer: Anthropic
+    tier: role_recommended
+    display_priority: 2
+    roles: [ai-solutions-architect]
+  - slug: claude-certified-architect-professional
+    name: Claude Certified Architect, Professional
+    issuer: Anthropic
+    tier: specialist
+    display_priority: 3
+    roles: [ai-solutions-architect]
+    notes: Listed as a later step after Foundations.
+  - slug: claude-certified-developer-foundations
+    name: Claude Certified Developer, Foundations
+    issuer: Anthropic
+    tier: role_recommended
+    display_priority: 4
+    roles: [ai-engineer-developer]
+  - slug: aws-associate-level
+    name: AWS associate-level certification
+    issuer: Amazon Web Services
+    tier: role_recommended
+    roles: [ai-engineer-developer]
+    notes: Placeholder for the specific AWS associate credential(s) you want to recommend.
+  - slug: azure-associate-level
+    name: Microsoft Azure associate-level certification
+    issuer: Microsoft
+    tier: role_recommended
+    roles: [ai-engineer-developer]
+    notes: Placeholder for the specific Azure associate credential(s) you want to recommend.
+  - slug: google-cloud-associate-level
+    name: Google Cloud associate-level certification
+    issuer: Google Cloud
+    tier: role_recommended
+    roles: [ai-engineer-developer]
+    notes: Placeholder for the specific Google Cloud associate credential(s) you want to recommend.
+  - slug: microsoft-ai-transformation-leader
+    name: Microsoft AI Transformation Leader
+    issuer: Microsoft
+    code: AB-731
+    tier: role_recommended
+    display_priority: 13
+    roles: [ai-transformation-strategist, client-delivery-lead]
+  - slug: prosci-certified-change-practitioner
+    name: Prosci Certified Change Practitioner
+    issuer: Prosci
+    tier: role_recommended
+    roles: [change-adoption-strategist]
+  - slug: pmi-pmp
+    name: Project Management Professional (PMP)
+    issuer: Project Management Institute
+    code: PMP
+    tier: role_recommended
+    roles: [program-project-manager]
+  - slug: pmi-capm
+    name: Certified Associate in Project Management (CAPM)
+    issuer: Project Management Institute
+    code: CAPM
+    tier: role_recommended
+    roles: [program-project-manager]
+  - slug: scrum-alliance-csm
+    name: Certified ScrumMaster (CSM)
+    issuer: Scrum Alliance
+    code: CSM
+    tier: role_recommended
+    roles: [program-project-manager]
+  - slug: scrum-org-psm-i
+    name: Professional Scrum Master I (PSM I)
+    issuer: Scrum.org
+    code: PSM I
+    tier: role_recommended
+    roles: [program-project-manager]
+  - slug: lean-six-sigma-green-belt
+    name: Lean Six Sigma Green Belt
+    issuer: Various (e.g., ASQ, IASSC)
+    tier: role_recommended
+    roles: [process-improvement-specialist]
+  - slug: lean-six-sigma-black-belt
+    name: Lean Six Sigma Black Belt
+    issuer: Various (e.g., ASQ, IASSC)
+    tier: specialist
+    roles: [process-improvement-specialist]
+  - slug: iaf-cpf
+    name: IAF Certified Professional Facilitator (CPF)
+    issuer: International Association of Facilitators
+    code: CPF
+    tier: role_recommended
+    roles: [training-facilitator]
+  - slug: atd-aptd
+    name: Associate Professional in Talent Development (APTD)
+    issuer: ATD
+    code: APTD
+    tier: role_recommended
+    roles: [training-facilitator]
+  - slug: atd-cptd
+    name: Certified Professional in Talent Development (CPTD)
+    issuer: ATD
+    code: CPTD
+    tier: specialist
+    roles: [training-facilitator, learning-experience-designer]
+  - slug: atd-instructional-design-certificate
+    name: ATD Instructional Design Certificate
+    issuer: ATD
+    tier: role_recommended
+    roles: [learning-experience-designer]
+  - slug: icf-acc
+    name: Associate Certified Coach (ACC)
+    issuer: International Coaching Federation
+    code: ACC
+    tier: role_recommended
+    roles: [executive-leadership-coach]
+  - slug: icf-pcc
+    name: Professional Certified Coach (PCC)
+    issuer: International Coaching Federation
+    code: PCC
+    tier: role_recommended
+    roles: [executive-leadership-coach]
+  - slug: icf-mcc
+    name: Master Certified Coach (MCC)
+    issuer: International Coaching Federation
+    code: MCC
+    tier: specialist
+    roles: [executive-leadership-coach]
+  - slug: shrm-cp
+    name: SHRM Certified Professional (SHRM-CP)
+    issuer: SHRM
+    code: SHRM-CP
+    tier: role_recommended
+    roles: [workforce-hr-strategist]
+  - slug: shrm-scp
+    name: SHRM Senior Certified Professional (SHRM-SCP)
+    issuer: SHRM
+    code: SHRM-SCP
+    tier: specialist
+    roles: [workforce-hr-strategist]
+
+# ---------------------------------------------------------------------------
+# Dropdowns and checklists on the form. Format: value: Label
+# Don't change a value once it's in use; change the label instead.
+# ---------------------------------------------------------------------------
+options:
+  hear_about:
+    referral: Referral
+    event: Event
+    linkedin: LinkedIn
+    claude_partner_network: Claude Partner Network
+    other: Other
+  time_zones:
+    ET: Eastern (ET)
+    CT: Central (CT)
+    MT: Mountain (MT)
+    PT: Pacific (PT)
+    AKT: Alaska (AKT)
+    HT: Hawaii (HT)
+    other: Outside the US
+  industries:
+    nonprofit: Nonprofit
+    government: Government
+    education: Education
+    healthcare: Healthcare
+    financial_services: Financial services
+    insurance: Insurance
+    professional_services: Professional services
+    trades_construction: Trades / construction
+    technology: Technology
+    hospitality: Hospitality
+    faith_based: Faith-based
+    other: Other
+  client_types:
+    fortune_500: Fortune 500
+    mid_market: Mid-market
+    small_business: Small business
+    startups: Startups
+    public_sector: Public sector
+    nonprofits: Nonprofits
+  tools:
+    claude: Claude
+    chatgpt: ChatGPT
+    microsoft_copilot: Microsoft Copilot
+    gemini: Gemini
+    n8n: n8n
+    zapier: Zapier
+    make: Make
+    notion: Notion
+    airtable: Airtable
+    hubspot: HubSpot
+    salesforce: Salesforce
+    microsoft_365: Microsoft 365
+    google_workspace: Google Workspace
+    aws: AWS
+    azure: Azure
+    google_cloud: Google Cloud
+    python: Python
+    sql: SQL
+    power_bi: Power BI
+    canva: Canva
+    lms_platforms: LMS platforms
+    other: Other
+  ai_usage_frequency:
+    never: Never
+    monthly: Monthly
+    weekly: Weekly
+    daily: Daily
+    core: It's core to how I work
+  proficiency:
+    "1": Familiar
+    "2": Working
+    "3": Advanced
+    "4": Expert
+  hours_per_week:
+    under_10: Under 10 hours
+    10_20: 10 to 20 hours
+    20_30: 20 to 30 hours
+    30_40: 30 to 40 hours
+    40_plus: 40+ hours
+  engagement_types:
+    project_based: Project-based
+    part_time_retainer: Part-time retainer
+    embedded: Embedded with a client
+    facilitation_training: Facilitation or training only
+    rfp_bench: RFP bid bench
+  work_settings:
+    remote: Remote
+    onsite_houston: On-site, Houston
+    onsite_dmv: On-site, DMV
+    travel: Willing to travel
+  travel_frequency:
+    rarely: Rarely (under 10%)
+    sometimes: Sometimes (10 to 25%)
+    often: Often (25 to 50%)
+    frequently: Frequently (over 50%)
+  operating_as:
+    sole_proprietor: Sole proprietor
+    entity: LLC or other entity
+    not_set_up: Not yet set up
+  liability_insurance:
+    "yes": "Yes"
+    "no": "No"
+    not_yet: Not yet
+  ai_cert_commitment:
+    "yes": "Yes"
+    "no": "No"
+    already_have: I already have one
+  team_size:
+    2_5: 2 to 5
+    6_10: 6 to 10
+    11_25: 11 to 25
+    26_50: 26 to 50
+    50_plus: 50+
+  business_certs:
+    mbe: MBE
+    wbe: WBE
+    wosb: WOSB
+    edwosb: EDWOSB
+    sbe: SBE
+    dbe: DBE
+    hub: Texas HUB
+    hubzone: HUBZone
+    sdvosb: SDVOSB
+    8a: 8(a)
+    other: Other
+
+statuses:
+  - { key: applied, label: Applied }
+  - { key: under_review, label: Under Review }
+  - { key: alignment_call_invited, label: Alignment Call Invited }
+  - { key: alignment_call_scheduled, label: Alignment Call Scheduled }
+  - { key: post_call_review, label: Post-Call Review }
+  - { key: additional_info_requested, label: Additional Info Requested }
+  - { key: approved_in_development, label: "Approved: In Development", description: "MOU, coursework, certification" }
+  - { key: qualified_awaiting_assignment, label: "Qualified: Awaiting Assignment" }
+  - { key: active_on_project, label: Active on Project }
+  - { key: on_hold, label: On Hold }
+  - { key: not_selected, label: Not Selected, is_terminal: true }
+  - { key: withdrawn, label: Withdrawn, is_terminal: true }
+  - { key: inactive, label: Inactive, is_terminal: true }
+
+scorecards:
+  application_review:
+    - Relevant skills and experience
+    - Interest in our practices
+    - Professional communication
+    - Availability and capacity
+    - Willingness to train
+    - Values alignment
+    - Potential project fit
+  post_call:
+    - Professionalism
+    - Communication
+    - Systems thinking
+    - AI aptitude
+    - Learning readiness
+    - Reliability
+    - Availability
+    - Values alignment
+    - Understanding of the pathway
+    - Client readiness
+    - Team fit
+    - Concerns or risks
+    - Recommended next step
+
+onboarding_steps:
+  - MOU sent
+  - MOU signed
+  - Company alias email created
+  - Anthropic Academy account created
+  - Coursework registered
+  - Coursework complete
+  - Exam prep meeting
+  - Exam scheduled
+  - Subcontractor agreement and W-9 sent
+  - Certification complete
+  - Contractor documents complete
+  - Final review
+  - Portal access granted
+  - Orientation complete
+
+settings:
+  retention_months:
+    value: 24
+    description: Months to keep Not Selected / Withdrawn records before automatic deletion (unless they updated their profile in that time).
+  draft_retention_days:
+    value: 30
+    description: Days before an unsubmitted application and its resume are deleted.
+  profile_refresh_days:
+    value: 90
+    description: Days after which a profile counts as stale (for the Phase 3 refresh reminder).
