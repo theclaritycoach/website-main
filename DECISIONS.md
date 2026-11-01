@@ -28,3 +28,10 @@ Plain-language record of choices made while building the CCE Talent Network, and
 19. **Some general credentials in the brief became specific entries.** "Agile/Scrum" became CSM and PSM I. "ATD credentials" became APTD and CPTD. "ICF credentials" became ACC, PCC, and MCC. "SHRM credentials" became SHRM-CP and SHRM-SCP. "Lean Six Sigma" became Green Belt and Black Belt. The advanced levels (CPTD, MCC, SHRM-SCP, Black Belt, and Claude Certified Architect Professional) sit at the specialist tier. Delete any you don't want from the YAML.
 20. **Sample people work at fictional companies.** That avoids attaching made-up people to real employers while still exercising the company search.
 21. **Access rules are tested on every run.** The tests check that every table has RLS on, that anonymous visitors and logged-in non-admins see zero rows of people data, and that a deactivated admin loses access immediately.
+
+## 2026-11-01: Catalog additions from the future-of-work brief
+
+22. **Four roles added:** AI Operations Specialist and AI Governance & Risk Specialist (AI & Automation), Human-AI Work Design Strategist (People & Workforce), and Proposal / Capture Manager (Cross-practice). Reasoning is in `docs/FUTURE-OF-WORK-TALENT-BRIEF.md`.
+23. **New skills on existing roles,** plus one new shared skill for every role: "Reviewing and verifying AI output."
+24. **Five certifications added,** all marked as needing verification: IAPP AIGP, ISO/IEC 42001 Lead Implementer, PMI-CPMAI, APMP Foundation, and APMP Practitioner.
+25. **AI Governance & Risk Specialist sits in AI & Automation,** next to AI Transformation Strategist, so AI-related roles filter together.

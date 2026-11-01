@@ -2,7 +2,7 @@
 
 Generated from `supabase/seed-data/catalog.yaml` by `npm run seed:build`. Edit the YAML, not this file.
 
-**Totals:** 4 practice groups, 17 roles, 129 unique skills, 27 certifications.
+**Totals:** 4 practice groups, 21 roles, 170 unique skills, 32 certifications.
 
 ## Shared skills (every role)
 
@@ -12,6 +12,7 @@ Generated from `supabase/seed-data/catalog.yaml` by `npm run seed:build`. Edit t
 - Facilitation of working sessions
 - AI tool fluency (prompting, using AI in daily work)
 - Responsible AI use and data privacy basics
+- Reviewing and verifying AI output
 
 ## Cross-practice
 
@@ -37,7 +38,18 @@ Generated from `supabase/seed-data/catalog.yaml` by `npm run seed:build`. Edit t
 - Risk management
 - Project tools (Asana, ClickUp, Monday, MS Project)
 - Government contract deliverables and compliance
-- *Recommended certifications:* Project Management Professional (PMP); Certified Associate in Project Management (CAPM); Certified ScrumMaster (CSM); Professional Scrum Master I (PSM I)
+- *Recommended certifications:* Project Management Professional (PMP); Certified Associate in Project Management (CAPM); Certified ScrumMaster (CSM); Professional Scrum Master I (PSM I); PMI Certified Professional in Managing AI (PMI-CPMAI)
+
+### Proposal / Capture Manager: Leads RFP responses and capture planning for bids.
+
+- Proposal management
+- Compliance matrices and RFP analysis
+- Capture planning
+- Proposal storyboarding and writing
+- Pricing and cost volume coordination
+- Past performance write-ups
+- Government procurement rules (federal, state, local)
+- *Recommended certifications:* APMP Foundation; APMP Practitioner
 
 ## Strategy & Transformation
 
@@ -60,6 +72,8 @@ Generated from `supabase/seed-data/catalog.yaml` by `npm run seed:build`. Edit t
 - Resistance management
 - Adoption measurement
 - Training needs analysis
+- AI adoption coaching
+- AI anxiety and trust building
 - *Recommended certifications:* Prosci Certified Change Practitioner
 
 ### Operations & Business Systems Strategist
@@ -72,6 +86,7 @@ Generated from `supabase/seed-data/catalog.yaml` by `npm run seed:build`. Edit t
 - Operational reporting
 - Capacity planning
 - Tech stack audits
+- AI-ready knowledge capture (SOPs and knowledge bases people and AI can both use)
 
 ### Process Improvement Specialist
 
@@ -105,7 +120,9 @@ Generated from `supabase/seed-data/catalog.yaml` by `npm run seed:build`. Edit t
 - ROI analysis for AI
 - Vendor and tool evaluation
 - AI training design for teams
-- *Recommended certifications:* Google Cloud Generative AI Leader; Microsoft AI Transformation Leader
+- Human-AI operating model design
+- AI value measurement after launch
+- *Recommended certifications:* Google Cloud Generative AI Leader; Microsoft AI Transformation Leader; Artificial Intelligence Governance Professional (AIGP); PMI Certified Professional in Managing AI (PMI-CPMAI)
 
 ### AI Solutions Architect
 
@@ -117,6 +134,8 @@ Generated from `supabase/seed-data/catalog.yaml` by `npm run seed:build`. Edit t
 - Integration architecture
 - Security and access design
 - Evaluation and testing of AI systems
+- Multi-agent system design
+- AI system observability and monitoring
 - *Recommended certifications:* Claude Certified Architect, Foundations; Claude Certified Architect, Professional
 
 ### AI Engineer / Developer
@@ -130,6 +149,8 @@ Generated from `supabase/seed-data/catalog.yaml` by `npm run seed:build`. Edit t
 - Databases (Postgres, Supabase)
 - Cloud deployment (AWS, Azure, GCP, Netlify, Vercel)
 - Version control (Git)
+- Client-embedded delivery (forward-deployed)
+- Agent evaluation and testing
 - *Recommended certifications:* Claude Certified Developer, Foundations; AWS associate-level certification; Microsoft Azure associate-level certification; Google Cloud associate-level certification
 
 ### Automation & Implementation Specialist
@@ -141,6 +162,7 @@ Generated from `supabase/seed-data/catalog.yaml` by `npm run seed:build`. Edit t
 - Integration setup
 - Testing and QA
 - User documentation
+- AI agent builders (Copilot Studio, Claude, n8n AI nodes)
 
 ### Data & Analytics Specialist
 
@@ -151,6 +173,28 @@ Generated from `supabase/seed-data/catalog.yaml` by `npm run seed:build`. Edit t
 - Survey design and analysis
 - Data visualization
 - Data governance
+- Data readiness for AI
+
+### AI Operations Specialist: Keeps AI agents and automations healthy after launch.
+
+- Agent monitoring and maintenance
+- Evaluation and testing of AI systems
+- Prompt and workflow tuning
+- Incident response for AI systems
+- AI usage and cost tracking
+- Client support and handoff documentation
+
+### AI Governance & Risk Specialist: AI policy, risk assessment, and regulatory compliance.
+
+- AI governance and policy
+- AI policy development
+- AI risk assessment
+- NIST AI Risk Management Framework
+- ISO/IEC 42001 AI management systems
+- AI regulatory requirements (TRAIGA, EU AI Act, sector rules)
+- AI vendor risk review
+- AI use disclosure and documentation
+- *Recommended certifications:* Artificial Intelligence Governance Professional (AIGP); ISO/IEC 42001 Lead Implementer
 
 ## People & Workforce
 
@@ -162,6 +206,7 @@ Generated from `supabase/seed-data/catalog.yaml` by `npm run seed:build`. Edit t
 - Succession planning
 - Executive development
 - Leadership assessments (DISC, StrengthsFinder, etc.)
+- Leading teams that include AI agents
 
 ### Training Facilitator: Delivers live workshops and trainings, in person or virtual.
 
@@ -172,6 +217,7 @@ Generated from `supabase/seed-data/catalog.yaml` by `npm run seed:build`. Edit t
 - Keynote and large-group speaking
 - Train-the-trainer
 - Session evaluation
+- AI literacy workshop delivery
 - *Recommended certifications:* IAF Certified Professional Facilitator (CPF); Associate Professional in Talent Development (APTD); Certified Professional in Talent Development (CPTD)
 
 ### Learning Experience Designer: Designs curriculum, courses, and learning materials.
@@ -183,6 +229,7 @@ Generated from `supabase/seed-data/catalog.yaml` by `npm run seed:build`. Edit t
 - Learning assessment design
 - Microlearning
 - Adult learning theory
+- AI-assisted course development
 - *Recommended certifications:* Certified Professional in Talent Development (CPTD); ATD Instructional Design Certificate
 
 ### Executive / Leadership Coach
@@ -204,7 +251,17 @@ Generated from `supabase/seed-data/catalog.yaml` by `npm run seed:build`. Edit t
 - Compensation and job architecture
 - Employee engagement
 - Workforce development programs
+- Skills-based hiring and job architecture
+- AI in HR compliance (bias, disclosure)
 - *Recommended certifications:* SHRM Certified Professional (SHRM-CP); SHRM Senior Certified Professional (SHRM-SCP)
+
+### Human-AI Work Design Strategist: Redesigns roles, workflows, and teams for people working alongside AI.
+
+- Task and role analysis for AI
+- Human-AI workflow design
+- Skills taxonomy and skills-based job architecture
+- Reskilling and upskilling program design
+- Workforce impact assessment
 
 ## Certifications (all marked as needing verification)
 
@@ -237,3 +294,8 @@ Generated from `supabase/seed-data/catalog.yaml` by `npm run seed:build`. Edit t
 | Master Certified Coach (MCC) | International Coaching Federation | MCC | specialist | executive-leadership-coach |
 | SHRM Certified Professional (SHRM-CP) | SHRM | SHRM-CP | role_recommended | workforce-hr-strategist |
 | SHRM Senior Certified Professional (SHRM-SCP) | SHRM | SHRM-SCP | specialist | workforce-hr-strategist |
+| Artificial Intelligence Governance Professional (AIGP) | IAPP | AIGP | role_recommended | ai-governance-risk-specialist, ai-transformation-strategist |
+| ISO/IEC 42001 Lead Implementer | Various accredited bodies (e.g., PECB) |  | specialist | ai-governance-risk-specialist |
+| PMI Certified Professional in Managing AI (PMI-CPMAI) | Project Management Institute | PMI-CPMAI | role_recommended | program-project-manager, ai-transformation-strategist |
+| APMP Foundation | Association of Proposal Management Professionals |  | role_recommended | proposal-capture-manager |
+| APMP Practitioner | Association of Proposal Management Professionals |  | specialist | proposal-capture-manager |

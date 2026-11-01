@@ -31,6 +31,7 @@ shared_skills:
   - Facilitation of working sessions
   - AI tool fluency (prompting, using AI in daily work)
   - Responsible AI use and data privacy basics
+  - Reviewing and verifying AI output
 
 practices:
   - slug: cross-practice
@@ -61,6 +62,17 @@ practices:
           - Risk management
           - Project tools (Asana, ClickUp, Monday, MS Project)
           - Government contract deliverables and compliance
+      - slug: proposal-capture-manager
+        name: Proposal / Capture Manager
+        description: Leads RFP responses and capture planning for bids.
+        skills:
+          - Proposal management
+          - Compliance matrices and RFP analysis
+          - Capture planning
+          - Proposal storyboarding and writing
+          - Pricing and cost volume coordination
+          - Past performance write-ups
+          - Government procurement rules (federal, state, local)
 
   - slug: strategy-transformation
     name: Strategy & Transformation
@@ -85,6 +97,8 @@ practices:
           - Resistance management
           - Adoption measurement
           - Training needs analysis
+          - AI adoption coaching
+          - AI anxiety and trust building
       - slug: operations-business-systems-strategist
         name: Operations & Business Systems Strategist
         skills:
@@ -96,6 +110,7 @@ practices:
           - Operational reporting
           - Capacity planning
           - Tech stack audits
+          - AI-ready knowledge capture (SOPs and knowledge bases people and AI can both use)
       - slug: process-improvement-specialist
         name: Process Improvement Specialist
         skills:
@@ -130,6 +145,8 @@ practices:
           - ROI analysis for AI
           - Vendor and tool evaluation
           - AI training design for teams
+          - Human-AI operating model design
+          - AI value measurement after launch
       - slug: ai-solutions-architect
         name: AI Solutions Architect
         skills:
@@ -141,6 +158,8 @@ practices:
           - Integration architecture
           - Security and access design
           - Evaluation and testing of AI systems
+          - Multi-agent system design
+          - AI system observability and monitoring
       - slug: ai-engineer-developer
         name: AI Engineer / Developer
         skills:
@@ -153,6 +172,8 @@ practices:
           - Databases (Postgres, Supabase)
           - Cloud deployment (AWS, Azure, GCP, Netlify, Vercel)
           - Version control (Git)
+          - Client-embedded delivery (forward-deployed)
+          - Agent evaluation and testing
       - slug: automation-implementation-specialist
         name: Automation & Implementation Specialist
         skills:
@@ -163,6 +184,7 @@ practices:
           - Integration setup
           - Testing and QA
           - User documentation
+          - AI agent builders (Copilot Studio, Claude, n8n AI nodes)
       - slug: data-analytics-specialist
         name: Data & Analytics Specialist
         skills:
@@ -173,6 +195,29 @@ practices:
           - Survey design and analysis
           - Data visualization
           - Data governance
+          - Data readiness for AI
+      - slug: ai-operations-specialist
+        name: AI Operations Specialist
+        description: Keeps AI agents and automations healthy after launch.
+        skills:
+          - Agent monitoring and maintenance
+          - Evaluation and testing of AI systems
+          - Prompt and workflow tuning
+          - Incident response for AI systems
+          - AI usage and cost tracking
+          - Client support and handoff documentation
+      - slug: ai-governance-risk-specialist
+        name: AI Governance & Risk Specialist
+        description: AI policy, risk assessment, and regulatory compliance.
+        skills:
+          - AI governance and policy
+          - AI policy development
+          - AI risk assessment
+          - NIST AI Risk Management Framework
+          - ISO/IEC 42001 AI management systems
+          - AI regulatory requirements (TRAIGA, EU AI Act, sector rules)
+          - AI vendor risk review
+          - AI use disclosure and documentation
 
   - slug: people-workforce
     name: People & Workforce
@@ -186,6 +231,7 @@ practices:
           - Succession planning
           - Executive development
           - Leadership assessments (DISC, StrengthsFinder, etc.)
+          - Leading teams that include AI agents
       - slug: training-facilitator
         name: Training Facilitator
         description: Delivers live workshops and trainings, in person or virtual.
@@ -197,6 +243,7 @@ practices:
           - Keynote and large-group speaking
           - Train-the-trainer
           - Session evaluation
+          - AI literacy workshop delivery
       - slug: learning-experience-designer
         name: Learning Experience Designer
         description: Designs curriculum, courses, and learning materials.
@@ -208,6 +255,7 @@ practices:
           - Learning assessment design
           - Microlearning
           - Adult learning theory
+          - AI-assisted course development
       - slug: executive-leadership-coach
         name: Executive / Leadership Coach
         skills:
@@ -227,6 +275,17 @@ practices:
           - Compensation and job architecture
           - Employee engagement
           - Workforce development programs
+          - Skills-based hiring and job architecture
+          - AI in HR compliance (bias, disclosure)
+      - slug: human-ai-work-design-strategist
+        name: Human-AI Work Design Strategist
+        description: Redesigns roles, workflows, and teams for people working alongside AI.
+        skills:
+          - Task and role analysis for AI
+          - Human-AI workflow design
+          - Skills taxonomy and skills-based job architecture
+          - Reskilling and upskilling program design
+          - Workforce impact assessment
 
 # ---------------------------------------------------------------------------
 # Certifications. EVERY entry starts as needs_verification: true.
@@ -400,6 +459,33 @@ certifications:
     code: SHRM-SCP
     tier: specialist
     roles: [workforce-hr-strategist]
+  - slug: iapp-aigp
+    name: Artificial Intelligence Governance Professional (AIGP)
+    issuer: IAPP
+    code: AIGP
+    tier: role_recommended
+    roles: [ai-governance-risk-specialist, ai-transformation-strategist]
+  - slug: iso-42001-lead-implementer
+    name: ISO/IEC 42001 Lead Implementer
+    issuer: Various accredited bodies (e.g., PECB)
+    tier: specialist
+    roles: [ai-governance-risk-specialist]
+  - slug: pmi-cpmai
+    name: PMI Certified Professional in Managing AI (PMI-CPMAI)
+    issuer: Project Management Institute
+    code: PMI-CPMAI
+    tier: role_recommended
+    roles: [program-project-manager, ai-transformation-strategist]
+  - slug: apmp-foundation
+    name: APMP Foundation
+    issuer: Association of Proposal Management Professionals
+    tier: role_recommended
+    roles: [proposal-capture-manager]
+  - slug: apmp-practitioner
+    name: APMP Practitioner
+    issuer: Association of Proposal Management Professionals
+    tier: specialist
+    roles: [proposal-capture-manager]
 
 # ---------------------------------------------------------------------------
 # Dropdowns and checklists on the form. Format: value: Label
